@@ -1,0 +1,17 @@
+postgres database for open service same as mongoDB
+prisma works for relational db
+npx prisma init to initialize prisma files
+ORM- object relational mapper 
+prisma is ORM as we store data in table form but have to convert in json in object so orm is used to convert object to table
+prisma db pull extracts all the tables schema from existing databases
+npx prisma generate to create prisma client 
+npx prisma migrate dev to create tables in database
+
+schemas----> use models in models
+models-----> use client in prisma
+
+relationship between-
+user (id, email, name) and profile (username, id, userID (FK to user.id)) is one to one 
+user and post (id, title, userID (FK to user.id)) is one to many 
+post and tag (id, name) is many to many (there are no FKs in many to many relationships so we make a seperate table for ids of posts and tags)
+tags to post (tagID, postID)
